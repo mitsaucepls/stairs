@@ -151,16 +151,19 @@ Small but steady rewards encourage the user to continue returning to the app & P
 % Explain the process of creating the low-fidelity prototype. Include diagrams or wireframes if available:
 
 \begin{table}[H]
-    \begin{tabularx}{\textwidth}{|c|X|X|}
+\centering
+\renewcommand{\arraystretch}{1.5}
+\setlength{\tabcolsep}{12pt}
+    \begin{tabularx}{\textwidth}{|l|X|X|}
         \hline
-        \textbf{Component} & \textbf{Description} & \textbf{Functionality} \\
+        \cellcolor{TikTokRed}\textbf{Component} & \cellcolor{TikTokBlack}\textbf{\textcolor{white}{Description}} & \cellcolor{TikTokLightBlue}\textbf{Functionality} \\
         \hline
         Video Display Area & Fullscreen area to show videos. & Displays a single video at a time, taking up the bottom part of the screen. \\
         \hline
         Swipe Navigation & Gesture-based navigation for moving through videos. & Swiping up loads the next video; swiping down loads the previous video, if available. \\
         \hline
-        % Random Video Loader & Logic that fetches a random video to display. & Randomly selects and loads a video from the video pool whenever a new video is required (e.g., after reaching the end of history). \\
-        % \hline
+        Random Video Loader & Logic that fetches a random video to display. & Randomly selects and loads a video from the video pool whenever a new video is required (e.g., after reaching the end of history). \\
+        \hline
         Text Overlay Area & Area at the top of the screen for text that accompanies each video. & Displays a random line of text (e.g., a phrase or quote) that’s paired with the video. \\
         \hline
         Reload Mechanism & Mechanism to refresh the video feed if there are no previous videos in history. & Reloads the video feed to pull a new batch of random videos when the user reaches the top of the stack. \\
