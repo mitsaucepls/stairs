@@ -5,6 +5,7 @@
 \usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{caption}
+\usepackage{subcaption}
 \usepackage{geometry}
 \usepackage{array}
 \usepackage{tabularx}
@@ -134,38 +135,91 @@ All our sketches and results here
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{./resources/StairGamba.png}
-    \caption{Gambling with Incentives}
-    \label{fig:gamba}
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{./resources/StairMaster_1.png}
+        \caption{1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{./resources/StairMaster_2.png}
+        \caption{2}
+    \end{subfigure}
+
+    \vspace{0.5cm}
+
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{./resources/StairMaster_3.png}
+        \caption{3}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{./resources/StairMaster_4.png}
+        \caption{4}
+    \end{subfigure}
+
+    \vspace{0.5cm}
+
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{./resources/StairMaster_5.png}
+        \caption{5}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{./resources/StairMaster_6.png}
+        \caption{6}
+    \end{subfigure}
+
+    \caption{Stair Master Game}
+    \label{fig:StairMaster}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{./resources/StairImgAI.png}
-    \caption{AI Image Generation with Grandmas falling down Stairs}
-    \label{fig:imgai}
+    \begin{subfigure}[H]{0.8\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{./resources/StairImgAI_1.png}
+        \caption{1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[H]{0.8\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{./resources/StairImgAI_2.png}
+        \caption{2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[H]{0.8\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{./resources/StairImgAI_3.png}
+        \caption{3}
+    \end{subfigure}
+    \caption{Stair Image Generation}
+    \label{fig:StairImgAI}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{./resources/StairStats.png}
-    \caption{Stair Statboard}
-    \label{fig:statboard}
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{./resources/StairTikTokBrain_1.png}
+        \caption{1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{./resources/StairTikTokBrain_2.png}
+        \caption{2}
+    \end{subfigure}
+    \caption{Stair TikTok-Brain}
+    \label{fig:StairTikTokBrain}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{./resources/StairNewspaper.png}
-    \caption{Newspaper with Theme Slider}
-    \label{fig:newspaper}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{./resources/StairTikTokBrain.png}
-    \caption{TikTok Videos with Headline}
-    \label{fig:tiktokbrain}
-\end{figure}
+\subsection{Selected Interface Design}
 
 \begin{table}[H]
 \centering
@@ -182,9 +236,25 @@ Small but steady rewards encourage the user to continue returning to the app & P
 \end{tabularx}
 \end{table}
 
+
+
 \subsection{Prototyping}
 % Present the results of your project in this section. You might want to use tables, charts, and figures to show the data clearly.
 % Explain the process of creating the low-fidelity prototype. Include diagrams or wireframes if available:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{./resources/storyboard.png}
+    \caption{Lo-fi Prototype of TikTok-Brain Platform Interactions}
+    \label{fig:storyboard}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{./resources/full-system.png}
+    \caption{Lo-fi Prototype of TikTok-Brain Platform Example Views}
+    \label{fig:system-overview}
+\end{figure}
 
 \begin{table}[H]
 \centering
@@ -219,13 +289,6 @@ Small but steady rewards encourage the user to continue returning to the app & P
     \end{tabularx}
     \caption{Functionality of Design Interface Components}
 \end{table}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{prototype.png} % Replace with path to prototype image
-    \caption{Lo-fi Prototype of TikTok-Brain Platform}
-    \label{fig:prototype}
-\end{figure}
 
 \begin{table}[H]
     \centering
