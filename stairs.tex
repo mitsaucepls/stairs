@@ -105,33 +105,46 @@ These ideas were then collectively refined using digital tools such as LaTeX, Gi
 resulting in a diverse array of 25 to 30 potential concepts.
 
 To ensure our ideas were aligned with user needs and expectations,
-we proceeded to create and conduct a detailed interview comprising 20 questions,
+we proceeded to create and conduct a detailed survey comprising 20 questions,
 which was administered to 30 participants using Telekom Vote 2 and WhatsApp to reach out to the participants.
-The insights gathered during these interviews were crucial. They helped constructing personas and refine our initial ideas.
+The results helped constructing personas and refine our initial ideas.
 
 With a solid understanding of our user base,
 we evaluated the brainstormed ideas through a structured pro-contra analysis,
 taking into account the feedback and personas developed earlier.
-This phase of assessment was supported by Google Docs and LaTeX,
+This phase of assessment was supported by Markdown and LaTeX,
 allowing us to narrow down our options to three final ideas.
 
 Subsequently, we moved to visually conceptualize these ideas through sketches and storyboards,
 utilizing Gimp, other graphic tools, and Kdenlive.
-This step was vital in visualizing the sequence and flow of interactions,
-which were crucial for the later stages of prototyping.
+This step was to visualize the sequence and flow of interactions,
+which were used for the later stages of prototyping.
 
+In a presentation to gather user feedback,
+participants evaluated the top three ideas from each of six groups, totaling 21 ideas.
+Each of the 25 attendees had two votes to allocate,
+allowing them to identify the concepts they found most compelling.
 This iterative process of development and refinement led to the selection
 of the most promising prototype based on its functionality and user feedback.
 
 The final stage of our project involved the creation of professional presentations and a comprehensive final report,
 crafted using PowerPoint and LaTeX. These documents provided a detailed overview of the project process,
 from the initial concept to the final evaluation of the prototype.
-This ensured that every aspect of the project was clearly documented.
 
 \section{Results}
+This chapter presents the progression from the already refined concept sketches to the final prototype,
+detailing the design decisions, evaluations, and functionality development.
 
 \subsection{Concept Sketches}
-All our sketches and results here
+The top 3 of our ideas were:
+
+\begin{enumerate}
+    \item \textbf{Stair Master:} a versus game where the player has to climb stairs efficiently and safe.
+    \item \textbf{StAIr:} an AI image generator where people falling down the stairs with safety prompts embedded.
+    \item \textbf{TikTok-Brain:} daily TikTok brainrot bundled inside an application to focus on safety prompts.
+\end{enumerate}
+
+\pagebreak
 
 \begin{figure}[H]
     \centering
@@ -198,10 +211,9 @@ All our sketches and results here
         \includegraphics[width=\textwidth]{./resources/StairImgAI_3.png}
         \caption{3}
     \end{subfigure}
-    \caption{Stair AI Image Generation}
+    \caption{StAIr AI Image Generation}
     \label{fig:StairImgAI}
 \end{figure}
-
 
 \begin{figure}[H]
     \centering
@@ -216,16 +228,17 @@ All our sketches and results here
         \includegraphics[width=\textwidth]{./resources/StairTikTokBrain_2.png}
         \caption{2}
     \end{subfigure}
-    \caption{Stair TikTok-Brain}
+    \caption{TikTok-Brain}
     \label{fig:StairTikTokBrain}
 \end{figure}
 
 
 \subsection{Selected Interface Designs}
 
+
 \begin{table}[H]
 \centering
-\textbf{\textcolor{TikTokBlack}{\large Stair Master Game\strut}}\par
+    \textbf{\textcolor{TikTokBlack}{\large Stair Master Game (1 vote)\strut}}\par
 \renewcommand{\arraystretch}{1.5}
 \setlength{\tabcolsep}{12pt}
     \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
@@ -249,7 +262,7 @@ All our sketches and results here
 
 \begin{table}[H]
 \centering
-\textbf{\textcolor{TikTokBlack}{\large Stair AI Image Generator\strut}}\par
+    \textbf{\textcolor{TikTokBlack}{\large Stair AI Image Generator (2 votes)\strut}}\par
 \renewcommand{\arraystretch}{1.5}
 \setlength{\tabcolsep}{12pt}
     \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
@@ -270,7 +283,7 @@ All our sketches and results here
 
 \begin{table}[H]
 \centering
-\textbf{\textcolor{TikTokBlack}{\large Stair TikTok-Brain\strut}}\par
+    \textbf{\textcolor{TikTokBlack}{\large Stair TikTok-Brain (11 votes)\strut}}\par
 \renewcommand{\arraystretch}{1.5}
 \setlength{\tabcolsep}{12pt}
     \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
@@ -291,11 +304,14 @@ All our sketches and results here
 \caption{Pro + Con analysis for rewards interface}
 \end{table}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{./ideas_distribution.png}
+    \caption{Presentation Voting Results}
+    \label{fig:system-overview}
+\end{figure}
+
 \subsection{Prototyping}
-% Present the results of your project in this section. You might want to use tables, charts, and figures to show the data clearly.
-% Explain the process of creating the low-fidelity prototype. Include diagrams or wireframes if available:
-
-
 
 \begin{figure}[H]
     \centering
@@ -345,37 +361,64 @@ All our sketches and results here
     \caption{Functionality of Design Interface Components}
 \end{table}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|c|}
-        \hline
-        Metric & Prototype & Feedback Score \\
-        \hline
-        Usability & 4.5 & Positive \\
-        Sustainability Awareness & 4.2 & Neutral \\
-        Engagement & 4.8 & Very Positive \\
-        \hline
-    \end{tabular}
-    \caption{Usability Testing Results}
-    \label{tab:results}
-\end{table}
-
 \section{Discussion}
-Analyze the results here, discussing what the results imply about the effectiveness of your platform. Discuss any limitations or challenges encountered.
+% Analyze the results here, discussing what the results imply about the effectiveness of your platform. Discuss any limitations or challenges encountered.
+
+This chapter discusses these findings in the context of design decisions,
+user feedback, usability testing, and future considerations.
+Through a structured pro-con analysis, it was evident that an app using short-form video could achieve high engagement,
+especially among users already accustomed to similar social media platforms.
+However, feedback also highlighted a challenge: while the video format was engaging,
+users might still lose interest over time if the content did not vary or if the purpose of the app wasn’t clear.
+This feedback led us to focus on creating a highly dynamic and visually engaging app experience.
+
+User feedback was central to the evolution of the TikTok-Brain app.
+In the early stages, a pool of 30 participants provided input through surveys,
+which helped us understand user preferences and expectations.
+Insights from these surveys guided initial design decisions,
+including the importance of a distraction-free interface and the appeal of humorous, engaging content.
+
+The pro-con analysis further emphasized the importance of simplicity in the app design.
+Through iterative design cycles, the app was refined to eliminate traditional social media features (likes, comments, shares).
+This iterative process helped ensure that TikTok-Brain met user expectations,
+balanced engagement with educational content, and avoided the pitfalls of over-complicating the interface.
+
+One of the critical design choices in TikTok-Brain was its simplified user interface.
+Navigation within the app relied solely on intuitive swipe gestures,
+which allowed users to seamlessly move between videos without unnecessary interaction.
+This minimalism ensured that safety messages remained the focus point.
+
+While TikTok-Brain successfully demonstrated the potential of short-form video for safety messaging, some limitations were noted.
+One limitation is the app’s reliance on randomized video content, which, while engaging,
+may not always align with the specific needs or preferences of each user.
+Future iterations could incorporate AI-driven personalization to adapt the content based on user interaction patterns,
+enhancing the relevance and impact of safety messages.
 
 \section{Conclusion}
-Summarize the key findings and discuss the impact of your work. Outline potential future work or improvements for the platform.
+% Summarize the key findings and discuss the impact of your work. Outline potential future work or improvements for the platform.
+The TikTok-Brain project successfully demonstrates an innovative approach
+to delivering safety messages by harnessing the engaging power of short-form video.
+Through iterative design and user feedback, we refined the app to ensure it was both intuitive and effective.
+The minimalist, swipe-based interface encourages users to focus on the content,
+enhancing message retention without the lure of likes, comments, or other interactive elements.
 
-\newpage
-\bibliographystyle{ieeetr}
-\bibliography{Bibliography}
-\newpage
+While the randomized video approach proved engaging,
+future iterations could benefit from personalized content driven by AI,
+tailoring safety messages more closely to user behaviors and preferences.
+Overall, TikTok-Brain represents a promising step forward in digital safety interventions,
+merging entertainment with crucial safety information to cultivate awareness and prevent distracted stair usage.
+This prototype serves as a foundation for further developments in creating engaging yet purposeful social media applications.
 
-\renewcommand{\thesection}{\Alph{section}}
+% \newpage
+% \bibliographystyle{ieeetr}
+% \bibliography{Bibliography}
+% \newpage
 
-\appendix
+% \renewcommand{\thesection}{\Alph{section}}
 
-\section{AI Appendix}
-asdf
+% \appendix
+
+% \section{AI Appendix}
+% asdf
 
 \end{document}
