@@ -337,13 +337,11 @@ The top 3 of our ideas were:
         \hline
         Video Display Area & Fullscreen area to show videos. & Displays a single video at a time, taking up the bottom part of the screen. \\
         \hline
-        Swipe Navigation & Gesture-based navigation for moving through videos. & Swiping up loads the next video; swiping down loads the previous video, if available. \\
+        Swipe Navigation & Gesture-based navigation for moving through videos. & Swiping up loads the next video; swiping down loads the previous video. \\
         \hline
-        Random Video Loader & Logic that fetches a random video to display. & Randomly selects and loads a video from the video pool whenever a new video is required (e.g., after reaching the end of history). \\
+        Random Video Loader & Logic that fetches a random video to display. & Randomly selects and loads a video from the video pool whenever a new video is required. \\
         \hline
         Text Overlay Area & Area at the top of the screen for text that accompanies each video. & Displays a random line of text (e.g., a phrase or quote) that’s paired with the video. \\
-        \hline
-        Reload Mechanism & Mechanism to refresh the video feed if there are no previous videos in history. & Reloads the video feed to pull a new batch of random videos when the user reaches the top of the stack. \\
         \hline
         Video-Text Randomizer & Logic that pairs random videos with random text. & Ensures that each video is matched with a different text overlay each time it appears, maintaining freshness. \\
         \hline
@@ -353,7 +351,7 @@ The top 3 of our ideas were:
         \hline
         No Interaction Buttons & No buttons for like, comment, or share, emphasizing simplicity. & Only swipe gestures are recognized; no additional UI elements for social interactions. \\
         \hline
-        Error Handling Display & Fallback message or visual when loading fails. & Displays an error message if a video fails to load, with a prompt to swipe to reload. \\
+        Error Handling Display & Fallback message or visual when loading fails. & Displays an error message if a video fails to load, with a prompt to restart the application. \\
         \hline
         Auto Swipe Animation & Animation that mimics a swipe if there’s no interaction for a while. & After a set period of inactivity, automatically performs a swipe animation to move to the next video, keeping the experience engaging. \\
         \hline
