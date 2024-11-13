@@ -24,8 +24,9 @@ plot <- ggplot(data, aes(x = age, y = crash_rate)) +
        x = "Age",
        y = "Stair Crash Rate (%)") +
   theme_minimal() +
-  theme(panel.background = element_rect(fill = "transparent", color = NA),  # Make panel background transparent
-        plot.background = element_rect(fill = "transparent", color = NA))   # Make plot background transparent
+  theme(panel.background = element_rect(fill = "white", color = NA),  # "transparent"
+        plot.background = element_rect(fill = "white", color = NA))   # "transparent"
 
 # Save the plot as a PNG with transparent background
-ggsave("stair_crash_rate.png", plot = plot, bg = "transparent", width = 8, height = 5, dpi = 300)
+# ggsave("stair_crash_rate.png", plot = plot, bg = "transparent", width = 8, height = 5, dpi = 300)
+ggsave("stair_crash_rate.png", plot = plot, width = 8, height = 5, dpi = 300)
