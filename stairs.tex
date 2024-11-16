@@ -139,12 +139,29 @@ This chapter presents the progression from the already refined concept sketches 
 detailing the design decisions, evaluations, and functionality development.
 
 \subsection{Concept Sketches}
-The top 3 of our ideas were:
+The top 3 of our concepts were:
 
 \begin{enumerate}
-    \item \textbf{Stair Master:} a versus game where the player has to climb stairs efficiently and safe.
-    \item \textbf{StAIr:} an AI image generator where people falling down the stairs with safety prompts embedded.
-    \item \textbf{TikTok-Brain:} daily TikTok brainrot bundled inside an application to focus on safety prompts.
+    \item \textbf{Stair Master:}
+is a competitive stair-walking game designed for two players.
+Participants race against each other to see who can climb stairs the fastest while maintaining safety.
+The game emphasizes decision-making by introducing factors such as footwear selection and the use of the handrail.
+Players must strike a balance between speed and caution to succeed.
+The game aims to engage users with an entertaining approach to promoting stair safety
+while subtly educating them on the importance of safe practices.
+    \item \textbf{StAIr:}
+is a humorous and interactive tool that generates AI made images of people falling down stairs.
+While this concept plays on humor, it serves as a reminder of the consequences of neglecting safety.
+The image-generation process integrates safety messages,
+ensuring users receive valuable advice while engaging with the entertaining visuals.
+By combining amusement with awareness, StAIr provides a unique way to stress the importance of staying vigilant on stairs.
+    \item \textbf{TikTok-Brain:}
+is a short-form video scroller inspired by apps like TikTok, it captivates users with mesmerizing,
+randomized videos displayed at the bottom of the screen.
+Safety notices are prominently shown at the top, creating a dual focus that entertains while educating.
+This concept eliminates traditional social interactions like likes,
+comments, and shares, simplifying the experience to prioritize safety messaging.
+The minimalist design ensures users are not distracted, maintaining the app’s focus on stair safety awareness.
 \end{enumerate}
 
 \pagebreak
@@ -154,13 +171,13 @@ The top 3 of our ideas were:
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairMaster_1.png}
-        \caption{1}
+        \caption{Tutorial Screen}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairMaster_2.png}
-        \caption{2}
+        \caption{Death Screen}
     \end{subfigure}
 
     \vspace{0.5cm}
@@ -168,13 +185,13 @@ The top 3 of our ideas were:
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairMaster_3.png}
-        \caption{3}
+        \caption{Progressing Gamestate}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairMaster_4.png}
-        \caption{4}
+        \caption{Second Death Screen}
     \end{subfigure}
 
     \vspace{0.5cm}
@@ -182,13 +199,7 @@ The top 3 of our ideas were:
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairMaster_5.png}
-        \caption{5}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{./resources/StairMaster_6.png}
-        \caption{6}
+        \caption{Winning Screen}
     \end{subfigure}
 
     \caption{Stair Master Game}
@@ -200,19 +211,19 @@ The top 3 of our ideas were:
     \begin{subfigure}[H]{0.8\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairImgAI_1.png}
-        \caption{1}
+        \caption{Idle Screen}
     \end{subfigure}
     \hfill
     \begin{subfigure}[H]{0.8\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairImgAI_2.png}
-        \caption{2}
+        \caption{Loading Screen}
     \end{subfigure}
     \hfill
     \begin{subfigure}[H]{0.8\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairImgAI_3.png}
-        \caption{3}
+        \caption{Image presentation Screen}
     \end{subfigure}
     \caption{StAIr AI Image Generation}
     \label{fig:StairImgAI}
@@ -223,20 +234,31 @@ The top 3 of our ideas were:
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairTikTokBrain_1.png}
-        \caption{1}
+        \caption{Video before Swipe}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairTikTokBrain_2.png}
-        \caption{2}
+        \caption{Video after Swipe}
     \end{subfigure}
     \caption{TikTok-Brain}
     \label{fig:StairTikTokBrain}
 \end{figure}
 
 
-\subsection{Selected Interface Designs}
+\subsection{Selected Concept Designs}
+
+This section draws from pro-con analysis tables derived from user feedback collected in earlier surveys.
+It details the advantages and drawbacks of the designs for Stair Master, StAIr, and TikTok-Brain.
+The feedback-driven tables offer essential insights into user preferences and engagement,
+helping to explain the selection process and potential impact of each design on promoting safety awareness.
+This evaluative approach emphasizes the user-centered design process
+and highlights the importance of empirical feedback in refining and finalizing the concept designs.
+
+In addition to the survey, a presentation followed by a voting session was conducted,
+where Stair Master accomplished 1 vote, StAIr accounted 2 votes, and TikTok-Brain achieved 11 votes.
+Having 22\% of the total votes positioned "TikTok-Brain" as the most favored concept among all 21 design concepts presented.
 
 \setlist[itemize]{topsep=3pt, parsep=0pt, leftmargin=1em}
 \begin{table}[H]
