@@ -1,8 +1,10 @@
 \documentclass{article}
+\usepackage{hyphenat}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage[table]{xcolor}
 \usepackage{amsmath}
+\usepackage[english]{babel}
 \usepackage{booktabs}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -10,6 +12,7 @@
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{hyperref}
+\usepackage{enumitem}
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage[titletoc,toc,page]{appendix}
 \addtocontents{toc}{\protect\thispagestyle{empty}}
@@ -25,15 +28,15 @@
 
 % Center everything on the page
 \begin{titlepage}
-\begin{center}
+    \begin{center}
 
-    % Logo and title
-    \includegraphics[width=0.1\textwidth]{./resources/logo.png} \\
-    \vspace{0.5cm}
-    {\Huge \textbf{TikTok-Brain}} \\[0.5cm]
-    {\LARGE \textit{Lo-fi Prototyping and Usability Testing}} \\[2cm]
+        % Logo and title
+        \includegraphics[width=0.1\textwidth]{./resources/logo.png} \\
+        \vspace{0.5cm}
+        {\Huge \textbf{TikTok-Brain}} \\[0.5cm]
+        {\LARGE \textit{Lo-fi Prototyping and Usability Testing}} \\[2cm]
 
-\end{center}
+    \end{center}
 
     % Mission Statement
     \noindent
@@ -68,18 +71,18 @@
         the app ensures that users receive and retain important information about walking safely on stairs.
     } \\[1.5cm]
 
-\begin{center}
-    % Our Team
-    \textbf{\textcolor{TikTokBlack}{\Large Our Team}} \\[0.5cm]
+    \begin{center}
+        % Our Team
+        \textbf{\textcolor{TikTokBlack}{\Large Our Team}} \\[0.5cm]
 
-    % Team Photos and Names
-    \begin{tabular}{ccc}
-        \includegraphics[width=0.2\textwidth]{./resources/ole.png} &
-        \includegraphics[width=0.2\textwidth]{./resources/markus.png} &
-        \includegraphics[width=0.2\textwidth]{./resources/diba.png} \\[0.3cm]
-        Ole Einar Grundmann & Markus Siegert & Diba Zokai \\
-    \end{tabular}
-\end{center}
+        % Team Photos and Names
+        \begin{tabular}{ccc}
+            \includegraphics[width=0.2\textwidth]{./resources/ole.png} &
+            \includegraphics[width=0.2\textwidth]{./resources/markus.png} &
+            \includegraphics[width=0.2\textwidth]{./resources/diba.png} \\[0.3cm]
+            Ole Einar Grundmann & Markus Siegert & Diba Zokai \\
+        \end{tabular}
+    \end{center}
 \end{titlepage}
 
 \newpage
@@ -185,12 +188,29 @@ This chapter presents the progression from the already refined concept sketches 
 detailing the design decisions, evaluations, and functionality development.
 
 \subsection{Concept Sketches}
-The top 3 of our ideas were:
+The top 3 of our concepts were:
 
 \begin{enumerate}
-    \item \textbf{Stair Master:} a versus game where the player has to climb stairs efficiently and safe.
-    \item \textbf{StAIr:} an AI image generator where people falling down the stairs with safety prompts embedded.
-    \item \textbf{TikTok-Brain:} daily TikTok brainrot bundled inside an application to focus on safety prompts.
+    \item \textbf{Stair Master:}
+        is a competitive stair-walking game designed for two players.
+        Participants race against each other to see who can climb stairs the fastest while maintaining safety.
+        The game emphasizes decision-making by introducing factors such as footwear selection and the use of the handrail.
+        Players must strike a balance between speed and caution to succeed.
+        The game aims to engage users with an entertaining approach to promoting stair safety
+        while subtly educating them on the importance of safe practices.
+    \item \textbf{StAIr:}
+        is a humorous and interactive tool that generates AI made images of people falling down stairs.
+        While this concept plays on humor, it serves as a reminder of the consequences of neglecting safety.
+        The image-generation process integrates safety messages,
+        ensuring users receive valuable advice while engaging with the entertaining visuals.
+        By combining amusement with awareness, StAIr provides a unique way to stress the importance of staying vigilant on stairs.
+    \item \textbf{TikTok-Brain:}
+        Inspired by apps like TikTok,
+        TikTok-Brain is a short-form video scroller that engages users with engaging,
+        randomized videos displayed at the bottom of the screen.
+        Safety messages are prominently displayed at the top, creating a dual focus that both entertains and educates.
+        This concept eliminates traditional social interactions such as likes, comments, and shares,
+        simplifying the experience to prioritize safety messages.
 \end{enumerate}
 
 \pagebreak
@@ -200,13 +220,13 @@ The top 3 of our ideas were:
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairMaster_1.png}
-        \caption{1}
+        \caption{Tutorial Screen}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairMaster_2.png}
-        \caption{2}
+        \caption{Death Screen}
     \end{subfigure}
 
     \vspace{0.5cm}
@@ -214,13 +234,13 @@ The top 3 of our ideas were:
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairMaster_3.png}
-        \caption{3}
+        \caption{Progressing Gamestate}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairMaster_4.png}
-        \caption{4}
+        \caption{Second Death Screen}
     \end{subfigure}
 
     \vspace{0.5cm}
@@ -228,13 +248,7 @@ The top 3 of our ideas were:
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairMaster_5.png}
-        \caption{5}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.45\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{./resources/StairMaster_6.png}
-        \caption{6}
+        \caption{Winning Screen}
     \end{subfigure}
 
     \caption{Stair Master Game}
@@ -246,19 +260,21 @@ The top 3 of our ideas were:
     \begin{subfigure}[H]{0.8\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairImgAI_1.png}
-        \caption{1}
+        \caption{Idle Screen}
     \end{subfigure}
     \hfill
     \begin{subfigure}[H]{0.8\textwidth}
+        \vspace{3mm}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairImgAI_2.png}
-        \caption{2}
+        \caption{Loading Screen}
     \end{subfigure}
     \hfill
     \begin{subfigure}[H]{0.8\textwidth}
+        \vspace{3mm}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairImgAI_3.png}
-        \caption{3}
+        \caption{Image presentation Screen}
     \end{subfigure}
     \caption{StAIr AI Image Generation}
     \label{fig:StairImgAI}
@@ -269,94 +285,107 @@ The top 3 of our ideas were:
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairTikTokBrain_1.png}
-        \caption{1}
+        \caption{Video before Swipe}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{./resources/StairTikTokBrain_2.png}
-        \caption{2}
+        \caption{Video after Swipe}
     \end{subfigure}
     \caption{TikTok-Brain}
     \label{fig:StairTikTokBrain}
 \end{figure}
 
 
-\subsection{Selected Interface Designs}
+\subsection{Selected Concept Designs}
 
+This section draws from pro-con analysis tables derived from user feedback collected in earlier surveys.
+It details the advantages and drawbacks of the designs for Stair Master, StAIr, and TikTok-Brain.
+The feedback-driven tables offer essential insights into user preferences and engagement,
+helping to explain the selection process and potential impact of each design on promoting safety awareness.
+This evaluative approach emphasizes the user-centered design process
+and highlights the importance of empirical feedback in refining and finalizing the concept designs.
 
+In addition to the survey, a presentation followed by a voting session was conducted,
+where Stair Master accomplished 1 vote, StAIr accounted 2 votes, and TikTok-Brain achieved 11 votes.
+Having 22\% of the total votes positioned TikTok-Brain as the most favored concept among all 21 design concepts presented.
+
+\setlist[itemize]{topsep=3pt, parsep=0pt, leftmargin=1em}
 \begin{table}[H]
-\centering
+    \centering
     \textbf{\textcolor{TikTokBlack}{\large Stair Master Game (1 vote)\strut}}\par
-\renewcommand{\arraystretch}{1.5}
-\setlength{\tabcolsep}{12pt}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\tabcolsep}{12pt}
     \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
-\hline
-    \cellcolor{TikTokRed}\textbf{Pros} & \cellcolor{TikTokLightBlue}\textbf{Cons} \\
         \hline
+        \cellcolor{TikTokRed}\textbf{Pros} & \cellcolor{TikTokLightBlue}\textbf{Cons} \\
+        \hline
+        \vspace{-4mm}
         \begin{itemize}
             \item The majority enjoys playing minigames
             \item Social Gaming Interest
             \item Gaming Engagement
-        \end{itemize} &
+        \end{itemize}\nointerlineskip &
+        \vspace{-4mm}
         \begin{itemize}
             \item Does not catch much interest
             \item Few positiv feedback
-        \end{itemize}
-        \\
+        \end{itemize}\nointerlineskip \\
         \hline
-\end{tabularx}
-\caption{Pro + Con analysis for rewards interface}
+    \end{tabularx}
+    \caption{Pro + Con analysis for Stair Master}
 \end{table}
 
-
 \begin{table}[H]
-\centering
+    \centering
     \textbf{\textcolor{TikTokBlack}{\large StAIr AI Image Generator (2 votes)\strut}}\par
-\renewcommand{\arraystretch}{1.5}
-\setlength{\tabcolsep}{12pt}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\tabcolsep}{12pt}
     \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
-\hline
-    \cellcolor{TikTokRed}\textbf{Pros} & \cellcolor{TikTokLightBlue}\textbf{Cons} \\
         \hline
+        \cellcolor{TikTokRed}\textbf{Pros} & \cellcolor{TikTokLightBlue}\textbf{Cons} \\
+        \hline
+        \vspace{-4mm}
         \begin{itemize}
             \item Humor Preference
             \item Catches attention because of AI use
             \item Simple User-Interface
-        \end{itemize} &
+        \end{itemize}\nointerlineskip &
+        \vspace{-4mm}
         \begin{itemize}
             \item Humor is subjective
             \item Potential Insensitivity
             \item Attention may only focus on AI
-        \end{itemize}
-        \\
+        \end{itemize}\nointerlineskip \\
         \hline
-\end{tabularx}
-\caption{Pro + Con analysis for rewards interface}
+    \end{tabularx}
+    \caption{Pro + Con analysis for StAIr}
 \end{table}
 
 \begin{table}[H]
-\centering
+    \centering
     \textbf{\textcolor{TikTokBlack}{\large Stair TikTok-Brain (11 votes)\strut}}\par
-\renewcommand{\arraystretch}{1.5}
-\setlength{\tabcolsep}{12pt}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\tabcolsep}{12pt}
     \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
-\hline
-    \cellcolor{TikTokRed}\textbf{Pros} & \cellcolor{TikTokLightBlue}\textbf{Cons} \\
         \hline
+        \cellcolor{TikTokRed}\textbf{Pros} & \cellcolor{TikTokLightBlue}\textbf{Cons} \\
+        \hline
+        \vspace{-4mm}
         \begin{itemize}
             \item High Engagement with Memes and Humor
             \item Everyone spends time on short-form streamer daily
             \item Clear Warning Placement
-        \end{itemize} &
+        \end{itemize}\nointerlineskip &
+        \vspace{-4mm}
         \begin{itemize}
             \item Lower Engagement with Short-form Video
             \item Attention may only focus on videos
-        \end{itemize}
-        \\
+        \end{itemize}\nointerlineskip \\
         \hline
-\end{tabularx}
-\caption{Pro + Con analysis for rewards interface}
+    \end{tabularx}
+    \caption{Pro + Con analysis for TikTok-Brain}
 \end{table}
 
 \begin{figure}[H]
@@ -368,24 +397,49 @@ The top 3 of our ideas were:
 
 \subsection{Prototyping}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{./resources/storyboard.png}
-    \caption{Lo-fi Prototype of TikTok-Brain Platform Interactions}
-    \label{fig:storyboard}
-\end{figure}
+We selected TikTok-Brain as the final design concept because it aligns strongly with user feedback,
+engagement potential, and our core objective of promoting safety awareness.
+This decision was informed, as already mentioned in the previous section,
+by a thorough pro-con analysis based on user feedback from earlier surveys
+and validated by a voting session involving all 21 design concepts.
+
+\pagebreak
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{./resources/full-system.png}
-    \caption{Lo-fi Prototype of TikTok-Brain Platform Example Views}
-    \label{fig:system-overview}
+    \begin{subfigure}[H]{0.9\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{./resources/storyboard.png}
+        \caption{Storyboard}
+    \end{subfigure}
+    \begin{subfigure}[H]{0.9\textwidth}
+        \vspace{3mm}
+        \centering
+        \includegraphics[width=\textwidth]{./resources/full-system.png}
+        \caption{User Flow}
+    \end{subfigure}
+    \caption{Lo-fi Prototype of TikTok-Brain}
+    \label{fig:prototype}
 \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=\textwidth]{./resources/storyboard.png}
+%     \caption{Lo-fi Storyboard of TikTok-Brain Platform Interactions}
+%     \label{fig:storyboard}
+% \end{figure}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=\textwidth]{./resources/full-system.png}
+%     \caption{Lo-fi Prototype of TikTok-Brain Platform Example Views}
+%     \label{fig:system-overview}
+% \end{figure}
 
 \begin{table}[H]
-\centering
-\renewcommand{\arraystretch}{1.5}
-\setlength{\tabcolsep}{12pt}
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\tabcolsep}{12pt}
     \begin{tabularx}{\textwidth}{|l|X|X|}
         \hline
         \cellcolor{TikTokRed}\textbf{Component} & \cellcolor{TikTokBlack}\textbf{\textcolor{white}{Description}} & \cellcolor{TikTokLightBlue}\textbf{Functionality} \\
@@ -414,53 +468,224 @@ The top 3 of our ideas were:
     \caption{Functionality of Design Interface Components}
 \end{table}
 
-\section{Discussion}
-% Analyze the results here, discussing what the results imply about the effectiveness of your platform. Discuss any limitations or challenges encountered.
+\section{Project Report}
+\subsection{Lessons Learned}
+Throughout the TikTok-Brain project, there have been several valuable insights that will influence future work practices.
+The use of iterative design and continuous user feedback have greatly helped to improve our concept
+and demonstrated that early and frequent user involvement leads to more effective solutions.
+The structured approach for the generation of ideas,
+starting from individual brainstorming before moving to collective refinement,
+has shown how the combination of independent thinking with collaborative evaluation
+can create more diverse and innovative concepts.
+A particularly valuable lesson was the importance of simplification:
+by removing traditional elements of social media such as likes and comments,
+we have created a more focused user experience that better serves our main goal of promoting security.
+The progresson from survey-based research to persona development, followed by a structured pro-contra analysis,
+has provided a solid framework for the decision-making process which can be applied to future projects.
+We have also learned that even seemingly simple applications benefit from in-depth usability tests,
+as user interactions often reveal unexpected insights into interface design and content delivery.
+The project highlighted the challenge of balancing engagement with educational content
+and taught us that entertainment and learning are not neccessarily mutually exclusive when properly integrated.
+Furthermore, the experience of working with various digital tools (LaTeX, Gimp, Krita)
+has emphasized the importance of choosing suitable technologies for different phases of any project.
+Moving forward, the creation of detailed documentation throughout the development process,
+and not just in the end, will be essential to maintain the clarity of the project and allow effective team communication.
 
-This chapter discusses these findings in the context of design decisions,
-user feedback, usability testing, and future considerations.
-Through a structured pro-con analysis, it was evident that an app using short-form video could achieve high engagement,
-especially among users already accustomed to similar social media platforms.
-However, feedback also highlighted a challenge: while the video format was engaging,
-users might still lose interest over time if the content did not vary or if the purpose of the app wasn’t clear.
-This feedback led us to focus on creating a highly dynamic and visually engaging app experience.
+\subsection{Capacity Plan}
+One significant aspect that emerged during the planning and execution phases of our project
+was the initial miscalculation of available capacity.
+While the project plan was developed with the assumption of a maximum capacity of 200 hours,
+we discovered during implementation that the actual working capacity was only 160 hours.
+This discrepancy necessitated adjustments in time allocation and prioritization across various tasks.
+The detailed breakdown of planned versus actual time, along with results for each task, is presented in Table~\ref{tab:capacity}.
 
-User feedback was central to the evolution of the TikTok-Brain app.
-In the early stages, a pool of 30 participants provided input through surveys,
-which helped us understand user preferences and expectations.
-Insights from these surveys guided initial design decisions,
-including the importance of a distraction-free interface and the appeal of humorous, engaging content.
+The table highlights variances in specific activities where the actual time was either reduced due to capacity constraints,
+required less time than anticipated, or exceeded the plan due to unforeseen complexities.
+For instance, while sketching and storyboarding were initially planned for 30 hours,
+only 12 hours were spent due to reprioritization.
+Similarly, the time allocated to presentations and reports was significantly reduced due to the shorter presentation time,
+which was only discussed after the capacity plan was created.
+Despite these challenges, the adjustments ensured that the project objectives were met within the revised capacity limits.
 
-The pro-con analysis further emphasized the importance of simplicity in the app design.
-Through iterative design cycles, the app was refined to eliminate traditional social media features (likes, comments, shares).
-This iterative process helped ensure that TikTok-Brain met user expectations,
-balanced engagement with educational content, and avoided the pitfalls of over-complicating the interface.
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\tabcolsep}{12pt}
+    \begin{tabularx}{\textwidth}
+        {|>{\raggedright\arraybackslash}X|
+        >{\raggedright\arraybackslash}X|
+        >{\raggedright\arraybackslash}X|
+        >{\raggedright\arraybackslash}X|}
+        \hline
+        \cellcolor{TikTokRed}\textbf{Tasks} &
+        \cellcolor{TikTokBlack}\textbf{\textcolor{white}{Results}} &
+        \cellcolor{TikTokLightBlue}\textbf{Planned Time} &
+        \cellcolor{TikTokLightBlue}\textbf{Actual Time} \\
+        \hline
+        \textbf{Idea Development} & 25 - 30 ideas & 26 hours \newline
+        \vspace{-4mm}
+        \begin{itemize}[noitemsep]
+            \item 20-30h idea development
+            \item 6h refinement
+        \end{itemize}\nointerlineskip & 29 hours \newline
+        \vspace{-4mm}
+        \begin{itemize}[noitemsep]
+            \item 20h idea development
+            \item 9h refinement
+        \end{itemize}\nointerlineskip \\
+        \hline
+        \textbf{Creating and Conducting Interviews} & 20-question interview, Personas & 12 hours \newline
+        \vspace{-4mm}
+        \begin{itemize}[noitemsep]
+            \item 4.5h create interview
+            \item 1.5h conduct
+            \item 3h analyze
+            \item 3h Personas
+        \end{itemize}\nointerlineskip & 13 hours \newline
+        \vspace{-4mm}
+        \begin{itemize}[noitemsep]
+            \item 5h create interview
+            \item 2h conduct
+            \item 3h analyze
+            \item 3h Personas
+        \end{itemize}\nointerlineskip \\
+        \hline
+        \textbf{Pro - Con and Narrowing Down} & 3 final ideas & 7.5 hours \newline
+        \vspace{-4mm}
+        \begin{itemize}[noitemsep]
+            \item 6h Pro - Con analysis
+            \item 1.5h narrowing down
+        \end{itemize}\nointerlineskip & 6 hours \newline
+        \vspace{-4mm}
+        \begin{itemize}[noitemsep]
+            \item 5h Pro - Con analysis
+            \item 1h narrowing down
+        \end{itemize}\nointerlineskip \\
+        \hline
+        \textbf{Sketches and Storyboards} & Detailed storyboards & 30 hours \newline
+        \vspace{-4mm}
+        \begin{itemize}[noitemsep]
+            \item 15h sketches
+            \item 15h storyboards
+        \end{itemize}\nointerlineskip & 12 hours \newline
+        \vspace{-4mm}
+        \begin{itemize}[noitemsep]
+            \item 12h sketches
+        \end{itemize}\nointerlineskip \\
+        \hline
+        \textbf{Prototype Development and Evaluation} & Best prototype selected & 24 hours \newline
+        \vspace{-4mm}
+        \begin{itemize}[noitemsep]
+            \item 9h creation
+            \item 15h evaluation and finalization
+        \end{itemize}\nointerlineskip & 21 hours \newline
+        \vspace{-4mm}
+        \begin{itemize}[noitemsep]
+            \item 9h creation
+            \item 12h evaluation and finalization
+        \end{itemize}\nointerlineskip \\
+        \hline
+        \textbf{Presentations and Report} & Professional presentations and final report & 74 hours \newline
+        \vspace{-4mm}
+        \begin{itemize}[noitemsep]
+            \item 30h first presentation
+            \item 24h final presentation
+            \item 20h report creation
+        \end{itemize}\nointerlineskip & 58.5 hours \newline
+        \vspace{-4mm}
+        \begin{itemize}[noitemsep]
+            \item 13.5h first presentation
+            \item 9h final presentation
+            \item 36h report creation
+        \end{itemize}\nointerlineskip \\
+        \hline
+        \textbf{Buffer} & & \( \sim \)25h & \( \sim \)20.5h \\
+        \hline
+        \textbf{Total Time} & & \( \sim \)173.5h & \( \sim \)139.5h \\
+        \hline
+    \end{tabularx}
+    \caption{Capacity plan}
+    \label{tab:capacity}
+\end{table}
 
-One of the critical design choices in TikTok-Brain was its simplified user interface.
-Navigation within the app relied solely on intuitive swipe gestures,
-which allowed users to seamlessly move between videos without unnecessary interaction.
-This minimalism ensured that safety messages remained the focus point.
+\subsection{UX Challenges}
+Developing a TikTok-like application to promote stair safety awareness presented several unique UX challenges
+that required careful consideration. First, understanding the user was not a trivial task.
+As described earlier, conducting surveys, creating personas, and presenting ideas with a vote helped
+enormously in understanding user needs.
 
-While TikTok-Brain successfully demonstrated the potential of short-form video for safety messaging, some limitations were noted.
-One limitation is the app’s reliance on randomized video content, which, while engaging,
-may not always align with the specific needs or preferences of each user.
-Future iterations could incorporate AI-driven personalization to adapt the content based on user interaction patterns,
-enhancing the relevance and impact of safety messages.
+A major challenge was balancing engagement with awareness.
+The captivating nature of video content can distract users from the security message at the top of the screen.
+While this may be true, this type of video has proven that after a period of time,
+the user will eventually look up the safety tip.
 
-\section{Conclusion}
-% Summarize the key findings and discuss the impact of your work. Outline potential future work or improvements for the platform.
-The TikTok-Brain project successfully demonstrates an innovative approach
-to delivering safety messages by harnessing the engaging power of short-form video.
-Through iterative design and user feedback, we refined the app to ensure it was both intuitive and effective.
-The minimalist, swipe-based interface encourages users to focus on the content,
-enhancing message retention without the lure of likes, comments, or other interactive elements.
+Another challenge was to ensure the clarity of the safety message.
+Users may find it difficult to focus on or understand the text while captivated by the video.
+The safety message needed to be concise, visually distinct, and easy to read, using large fonts, high contrast, and plain language.
 
-While the randomized video approach proved engaging,
-future iterations could benefit from personalized content driven by AI,
-tailoring safety messages more closely to user behaviors and preferences.
-Overall, TikTok-Brain represents a promising step forward in digital safety interventions,
-merging entertainment with crucial safety information to cultivate awareness and prevent distracted stair usage.
-This prototype serves as a foundation for further developments in creating engaging yet purposeful social media applications.
+A potential risk was that the application might distract the stair walker, increasing the likelihood of an accident.
+To mitigate this, the screen is positioned off to the side of the stairs
+so that the captivating video is not visible while the user is on the stairs.
+Accessibility was another critical factor.
+Users with visual impairments or cognitive disabilities may find it difficult to engage with the content.
+Unfortunately, this is an issue that this idea cannot address.
+
+While social features such as likes and comments are excluded for simplicity,
+this could lead to a lack of interactivity, potentially reducing user engagement.
+Alternative forms of interaction, such as swiping through safety messages or an auto-playing video queue,
+can provide a sense of activity without overwhelming users.
+
+Content fatigue is another challenge, as repeated exposure to similar videos and messages can lead to disengagement.
+To address this, the video library and safety messages should be regularly updated with varied content.
+
+% \section{Discussion}
+% % Analyze the results here, discussing what the results imply about the effectiveness of your platform. Discuss any limitations or challenges encountered.
+
+% This chapter discusses these findings in the context of design decisions,
+% user feedback, usability testing, and future considerations.
+% Through a structured pro-con analysis, it was evident that an app using short-form video could achieve high engagement,
+% especially among users already accustomed to similar social media platforms.
+% However, feedback also highlighted a challenge: while the video format was engaging,
+% users might still lose interest over time if the content did not vary or if the purpose of the app wasn’t clear.
+% This feedback led us to focus on creating a highly dynamic and visually engaging app experience.
+
+% User feedback was central to the evolution of the TikTok-Brain app.
+% In the early stages, a pool of 30 participants provided input through surveys,
+% which helped us understand user preferences and expectations.
+% Insights from these surveys guided initial design decisions,
+% including the importance of a distraction-free interface and the appeal of humorous, engaging content.
+
+% The pro-con analysis further emphasized the importance of simplicity in the app design.
+% Through iterative design cycles, the app was refined to eliminate traditional social media features (likes, comments, shares).
+% This iterative process helped ensure that TikTok-Brain met user expectations,
+% balanced engagement with educational content, and avoided the pitfalls of over-complicating the interface.
+
+% One of the critical design choices in TikTok-Brain was its simplified user interface.
+% Navigation within the app relied solely on intuitive swipe gestures,
+% which allowed users to seamlessly move between videos without unnecessary interaction.
+% This minimalism ensured that safety messages remained the focus point.
+
+% While TikTok-Brain successfully demonstrated the potential of short-form video for safety messaging, some limitations were noted.
+% One limitation is the app’s reliance on randomized video content, which, while engaging,
+% may not always align with the specific needs or preferences of each user.
+% Future iterations could incorporate AI-driven personalization to adapt the content based on user interaction patterns,
+% enhancing the relevance and impact of safety messages.
+
+% \section{Conclusion}
+% % Summarize the key findings and discuss the impact of your work. Outline potential future work or improvements for the platform.
+% The TikTok-Brain project successfully demonstrates an innovative approach
+% to delivering safety messages by harnessing the engaging power of short-form video.
+% Through iterative design and user feedback, we refined the app to ensure it was both intuitive and effective.
+% The minimalist, swipe-based interface encourages users to focus on the content,
+% enhancing message retention without the lure of likes, comments, or other interactive elements.
+
+% While the randomized video approach proved engaging,
+% future iterations could benefit from personalized content driven by AI,
+% tailoring safety messages more closely to user behaviors and preferences.
+% Overall, TikTok-Brain represents a promising step forward in digital safety interventions,
+% merging entertainment with crucial safety information to cultivate awareness and prevent distracted stair usage.
+% This prototype serves as a foundation for further developments in creating engaging yet purposeful social media applications.
+
 
 % \newpage
 % \bibliographystyle{ieeetr}
